@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: whitesmoke;
+  font-family: "Raleway", sans-serif;
+}
+
+.top {
+  height: 100vh;
+  background-color: rgba(5, 188, 39, 0.33);
+  background-image: url(2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: overlay;
+}
+
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #f509406a;
+  display: inline-block;
+  padding: 10px 28px;
+  letter-spacing: 2px;
+  border-radius: 100px;
+}
+
+.testt {
+  color: whitesmoke;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+/*# sourceMappingURL=main.css.map */
