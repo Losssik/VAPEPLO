@@ -15,7 +15,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: whitesmoke;
+  color: #edf2f4;
   font-family: "Raleway", sans-serif;
   line-height: 1.6;
   font-size: 1.6rem;
@@ -29,6 +29,18 @@ a:visited {
   text-decoration: none;
   color: #edf2f4;
   text-transform: uppercase;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .grid--3 {
@@ -148,8 +160,30 @@ a:visited {
   }
 }
 
+@-webkit-keyframes inifnityRightAndReserve {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
+@keyframes inifnityRightAndReserve {
+  0% {
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+}
+
 .header {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   background-color: rgba(188, 36, 5, 0.33);
   background-image: url(x.jpg);
   background-repeat: no-repeat;
@@ -159,11 +193,15 @@ a:visited {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
+  text-align: center;
+  -webkit-box-shadow: 0 1px 12px 1px black;
+          box-shadow: 0 1px 12px 1px black;
 }
 
 .header__text {
   text-align: center;
   margin-top: 7rem;
+  font-style: italic;
   -webkit-animation-name: moveFromRight;
           animation-name: moveFromRight;
   -webkit-animation-duration: 1s;
@@ -173,11 +211,15 @@ a:visited {
 .header__title {
   font-family: "Permanent Marker", cursive;
   text-align: center;
+  font-style: italic;
+  letter-spacing: 0.6rem;
   font-size: 5rem;
   -webkit-animation-name: moveFromLeft;
           animation-name: moveFromLeft;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  display: inline-block;
+  padding: 1rem 3rem;
 }
 
 .header__heading {
@@ -240,7 +282,13 @@ a:visited {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 1rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  text-align: start;
 }
 
 .offer__icon {
@@ -257,6 +305,7 @@ a:visited {
 .offer__list {
   list-style-type: "-";
   margin-left: 1rem;
+  gap: 1rem;
 }
 
 #product-card-1 {
@@ -278,5 +327,25 @@ a:visited {
           animation-name: moveOutIn;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+
+.vendor__feature {
+  gap: 12rem;
+  -webkit-animation-name: inifnityRightAndReserve;
+          animation-name: inifnityRightAndReserve;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.vendor__logo {
+  width: 16rem;
+  height: auto;
+  color: blue;
 }
 /*# sourceMappingURL=main.css.map */

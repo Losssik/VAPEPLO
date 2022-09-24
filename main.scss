@@ -1,4 +1,7 @@
+//////////////////////////////////////////// SETUP ////////////////////////////////////////////////
 $font-color-main: #edf2f4;
+$font-color-second: #ef233c;
+$box-shadow: 0 1px 12px 1px black;
 
 html {
   font-size: 62.5%;
@@ -14,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: whitesmoke;
+  color: $font-color-main;
   font-family: "Raleway", sans-serif;
   line-height: 1.6;
   font-size: 1.6rem;
@@ -30,7 +33,13 @@ a:visited {
   text-transform: uppercase;
 }
 
-//////////////////////////////////////////// RE-USABLE components, animations ////////////////////////////////////////////////
+//////////////////////////////////////////// RE-USABLE components ////////////////////////////////////////////////
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .grid--3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -48,7 +57,7 @@ a:visited {
     cursor: pointer;
   }
 }
-
+//////////////////////////////////////////// ANIMATIONS ////////////////////////////////////////////////
 @keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -89,9 +98,18 @@ a:visited {
   }
 }
 
+@keyframes inifnityRightAndReserve {
+  0% {
+    transform: translateX(-250px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
 //////////////////////////////////////////// HEADER SECTION ///////////////////////////////////////////
 .header {
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   background-color: rgba($color: #bc2405, $alpha: 0.33);
   background-image: url(x.jpg);
   background-repeat: no-repeat;
@@ -100,10 +118,13 @@ a:visited {
   background-blend-mode: multiply;
   backface-visibility: hidden;
   overflow: hidden;
+  text-align: center;
+  box-shadow: $box-shadow;
 
   &__text {
     text-align: center;
     margin-top: 7rem;
+    font-style: italic;
     animation-name: moveFromRight;
     animation-duration: 1s;
   }
@@ -111,10 +132,13 @@ a:visited {
   &__title {
     font-family: "Permanent Marker", cursive;
     text-align: center;
-
+    font-style: italic;
+    letter-spacing: 0.6rem;
     font-size: 5rem;
     animation-name: moveFromLeft;
     animation-duration: 1s;
+    display: inline-block;
+    padding: 1rem 3rem;
   }
 
   &__heading {
@@ -159,28 +183,36 @@ a:visited {
   padding: 2rem;
 
   &__product {
-    border: 2px solid #ef233c;
+    border: 2px solid $font-color-second;
     border-radius: 10px;
     padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
+    //justify-items: start;
+    align-items: flex-start;
     gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: start;
   }
 
   &__icon {
     font-size: 4rem;
-    color: #ef233c;
+    color: $font-color-second;
   }
 
   &__tittle {
     text-transform: uppercase;
     font-weight: 600;
-    color: #ef233c;
+    color: $font-color-second;
+    //box-shadow: ;
   }
 
   &__list {
     list-style-type: "-";
     margin-left: 1rem;
+    gap: 1rem;
   }
 }
 
@@ -195,4 +227,22 @@ a:visited {
 #product-card-3 {
   animation-name: moveOutIn;
   animation-duration: 1s;
+}
+
+/////////////////////////////////////////// VENDOR SECTION ///////////////////////////////////////////
+
+.vendor {
+  &__feature {
+    gap: 12rem;
+    animation-name: inifnityRightAndReserve;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  &__logo {
+    width: 16rem;
+    height: auto;
+    color: blue;
+  }
 }
