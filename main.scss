@@ -1,6 +1,7 @@
 //////////////////////////////////////////// SETUP ////////////////////////////////////////////////
 $font-color-main: #edf2f4;
 $font-color-second: #ef233c;
+$main-color-black: #060707;
 $box-shadow: 0 1px 12px 1px black;
 
 html {
@@ -16,14 +17,16 @@ html {
 body {
   padding: 0;
   margin: 0;
+  margin: 0 auto;
   box-sizing: border-box;
   color: $font-color-main;
   font-family: "Raleway", sans-serif;
   line-height: 1.6;
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
-  margin: 0 auto;
   overflow-x: hidden;
+  // site was jumping slighlty to the left during refreshing on google chrome, this line prevents it
+  overflow-anchor: none;
 }
 
 a:link,
@@ -110,20 +113,27 @@ a:visited {
 //////////////////////////////////////////// HEADER SECTION ///////////////////////////////////////////
 .header {
   padding-bottom: 5rem;
-  background-color: rgba($color: #bc2405, $alpha: 0.33);
-  background-image: url(x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-blend-mode: multiply;
-  backface-visibility: hidden;
+
+  background: linear-gradient(
+    to right,
+    #b92b27,
+    #1565c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  //background-color: rgba($color: #bc2405, $alpha: 0.33);
+  //background-image: url(x.jpg);
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-position: center center;
+  //background-blend-mode: multiply;
+  //backface-visibility: hidden;
   overflow: hidden;
   text-align: center;
   box-shadow: $box-shadow;
 
   &__text {
     text-align: center;
-    margin-top: 7rem;
+    margin-top: 5rem;
     font-style: italic;
     animation-name: moveFromRight;
     animation-duration: 1s;
@@ -134,7 +144,7 @@ a:visited {
     text-align: center;
     font-style: italic;
     letter-spacing: 0.6rem;
-    font-size: 5rem;
+    font-size: 9rem;
     animation-name: moveFromLeft;
     animation-duration: 1s;
     display: inline-block;
@@ -143,7 +153,7 @@ a:visited {
 
   &__heading {
     text-align: center;
-    padding-top: 20rem;
+    padding-top: 2rem;
   }
 }
 
@@ -183,7 +193,6 @@ a:visited {
   padding: 2rem;
 
   &__product {
-    border: 2px solid $font-color-second;
     border-radius: 10px;
     padding: 2rem 2rem;
     display: flex;
@@ -198,15 +207,23 @@ a:visited {
   }
 
   &__icon {
-    font-size: 4rem;
-    color: $font-color-second;
+    font-size: 8rem;
+    color: #edf2f4;
   }
 
   &__tittle {
     text-transform: uppercase;
     font-weight: 600;
     color: $font-color-second;
+    background-color: $font-color-main;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-size: 2rem;
     //box-shadow: ;
+  }
+
+  &__text {
+    font-size: 2rem;
   }
 
   &__list {
@@ -236,6 +253,7 @@ a:visited {
     gap: 12rem;
     animation-name: inifnityRightAndReserve;
     animation-duration: 60s;
+    animation-delay: 0.2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -243,6 +261,96 @@ a:visited {
   &__logo {
     width: 16rem;
     height: auto;
-    color: blue;
+  }
+}
+
+/////////////////////////////////////////// TESTIMONIALS ///////////////////////////////////////////
+
+.testimonials {
+  margin-top: -2rem;
+  padding: 0 2rem;
+  color: red;
+
+  &__header {
+    color: $main-color-black;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+
+  &__subtext {
+    color: $font-color-second;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+  }
+
+  &__container {
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    padding: 4rem 1rem;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__card::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  }
+  &__card::after {
+    content: "	\2033";
+    font-style: italic;
+    font-size: 5rem;
+    color: $font-color-main;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(36% 0, 0 35%, 0 0);
+    background-color: $main-color-black;
+  }
+
+  &__review {
+    font-size: 2rem;
+    color: $font-color-main;
+    z-index: 3;
+    margin-top: 6rem;
+    padding: 3rem;
+    background-color: $font-color-second;
+    letter-spacing: 3px;
+    border-radius: 3px;
+  }
+
+  &__photo {
+    border-radius: 100%;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  &__author {
+    color: $font-color-second;
+    font-weight: 600;
   }
 }
