@@ -52,6 +52,17 @@ a:visited {
   grid-template-columns: 1fr 1fr;
 }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  background-color: $main-color-black;
+  opacity: 0.9;
+  padding-bottom: 3rem;
+  z-index: 1000;
+  animation-name: toOpacityFull;
+  animation-duration: 0.5s;
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
@@ -110,6 +121,15 @@ a:visited {
   }
 }
 
+@keyframes toOpacityFull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 //////////////////////////////////////////// HEADER SECTION ///////////////////////////////////////////
 .header {
   padding-bottom: 5rem;
@@ -162,9 +182,13 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+  // background-color: red;
+  gap: 4rem;
 
   &__ul {
-    @extend .navigation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 4rem;
     list-style-type: none;
     gap: 2rem;
@@ -185,6 +209,31 @@ a:visited {
 
 .navigation__item:hover::after {
   transform: scaleX(1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-top: 3rem;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin: 5px 5px;
+  transition: all 0.3s ease-in-out;
+  background-color: $font-color-main;
 }
 
 /////////////////////////////////////////// OFFER SECTION///////////////////////////////////////////
@@ -352,5 +401,37 @@ a:visited {
   &__author {
     color: $font-color-second;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 650px) {
+  .hamburger {
+    display: block;
+    margin-left: 2rem;
+  }
+
+  .navigation {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .navigation__ul {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    // margin-top: 3rem;
+    transition: 0.3s;
+    background-color: $main-color-black;
+    padding-bottom: 2rem;
+    opacity: 0.85;
+  }
+
+  .navigation__ul.active {
+    left: 0;
   }
 }

@@ -58,6 +58,19 @@ a:visited {
       grid-template-columns: 1fr 1fr;
 }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  background-color: #060707;
+  opacity: 0.9;
+  padding-bottom: 3rem;
+  z-index: 1000;
+  -webkit-animation-name: toOpacityFull;
+          animation-name: toOpacityFull;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
@@ -183,6 +196,24 @@ a:visited {
   }
 }
 
+@-webkit-keyframes toOpacityFull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes toOpacityFull {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header {
   padding-bottom: 5rem;
   background: -webkit-gradient(linear, left top, right top, from(#b92b27), to(#1565c0));
@@ -223,7 +254,7 @@ a:visited {
   padding-top: 2rem;
 }
 
-.navigation, .navigation__ul {
+.navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,9 +264,19 @@ a:visited {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 4rem;
 }
 
 .navigation__ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 4rem;
   list-style-type: none;
   gap: 2rem;
@@ -260,6 +301,36 @@ a:visited {
 .navigation__item:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding-top: 3rem;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  margin: 5px 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #edf2f4;
 }
 
 .offer {
@@ -451,5 +522,37 @@ a:visited {
 .testimonials__author {
   color: #ef233c;
   font-weight: 600;
+}
+
+@media (max-width: 650px) {
+  .hamburger {
+    display: block;
+    margin-left: 2rem;
+  }
+  .navigation {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .navigation__ul {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #060707;
+    padding-bottom: 2rem;
+    opacity: 0.85;
+  }
+  .navigation__ul.active {
+    left: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
