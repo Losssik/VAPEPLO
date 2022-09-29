@@ -435,3 +435,30 @@ a:visited {
     left: 0;
   }
 }
+
+////////////////////////////////////////////COOKIE///////////////////////////////////
+
+.cookie {
+  display: flex;
+  background-color: $main-color-black;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  &__container {
+    display: block;
+    z-index: 10000000;
+    position: fixed;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &__btn {
+    margin-left: -1rem;
+
+    &:hover {
+      color: $font-color-second;
+    }
+  }
+}
