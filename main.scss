@@ -71,6 +71,10 @@ a:visited {
     cursor: pointer;
   }
 }
+
+.none {
+  display: none;
+}
 //////////////////////////////////////////// ANIMATIONS ////////////////////////////////////////////////
 @keyframes moveFromLeft {
   0% {
@@ -444,6 +448,7 @@ a:visited {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  animation-name: toOpacityFull 2s;
 
   &__container {
     display: block;

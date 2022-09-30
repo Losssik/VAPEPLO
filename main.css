@@ -80,6 +80,10 @@ a:visited {
   cursor: pointer;
 }
 
+.none {
+  display: none;
+}
+
 @-webkit-keyframes moveFromLeft {
   0% {
     opacity: 0;
@@ -568,6 +572,8 @@ a:visited {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
+  -webkit-animation-name: toOpacityFull 2s;
+          animation-name: toOpacityFull 2s;
 }
 
 .cookie__container {

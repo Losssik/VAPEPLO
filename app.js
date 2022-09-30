@@ -3,6 +3,9 @@ const navigation = document.querySelector(".navigation");
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".navigation__ul");
 const navLink = document.querySelectorAll(".navigation__link");
+const cookieEl = document.querySelector(".cookie__container");
+const cookieAcceptBtn = document.querySelector("#cookie-accept");
+const cookieRejectBtn = document.querySelector("#cookie-reject");
 
 // IMPLEMENTING STICKY NAVIGATION
 const stickyNavigation = function (entries) {
@@ -32,3 +35,22 @@ navLink.forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+//  COOKIE LOCAL STORAGE POP-UP
+const cookieStorage = localStorage.getItem("cookie");
+let cookie;
+cookieAcceptBtn.addEventListener("click", function () {
+  cookie = localStorage.setItem("cookie", "accepted");
+  cookieEl.style.display = "none";
+});
+
+cookieRejectBtn.addEventListener("click", function () {
+  cookie = localStorage.setItem("cookie", "rejected");
+  cookieEl.style.display = "none";
+});
+
+window.addEventListener("load", function () {
+  if (cookieStorage === "accepted") {
+    cookieEl.style.display = "none";
+  }
+});
