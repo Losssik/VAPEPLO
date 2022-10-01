@@ -467,3 +467,20 @@ a:visited {
     }
   }
 }
+
+#map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 150rem;
+  height: 60rem;
+  border: 2px solid $main-color-black;
+  margin: 0 auto;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup.tip {
+  background-color: $main-color-black;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

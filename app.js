@@ -54,3 +54,32 @@ window.addEventListener("load", function () {
     cookieEl.style.display = "none";
   }
 });
+
+// RENDER MAP WITH SHOP LOCATION
+
+const rendermap = function () {
+  //coords of shop
+  const coords = [54.569584, 18.3923391];
+  const map = L.map("map").setView(coords, 16);
+
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  L.marker(coords)
+    .addTo(map)
+    .bindPopup(
+      L.popup({
+        closeButton: false,
+        autoClose: false,
+        closeOnEscapeKey: false,
+        closeOnClick: false,
+        content: "Generała Henryka Dąbrowskiego 17, Rumia",
+      })
+    )
+    .openPopup();
+};
+setTimeout(rendermap, 1000);
+
+// how to add event listener on marker????
