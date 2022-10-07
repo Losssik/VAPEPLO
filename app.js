@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// RENDER MAP WITH SHOP LOCATION
+// RENDER MAP WITH SHOP LOCATION USING LEAFLET API
 
 const rendermap = function () {
   //coords of shop
