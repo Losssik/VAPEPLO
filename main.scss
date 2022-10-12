@@ -6,6 +6,7 @@ $box-shadow: 0 1px 12px 1px black;
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 * {
   padding: 0;
@@ -41,6 +42,10 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.grid--4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .grid--3 {
@@ -499,12 +504,21 @@ a:visited {
   grid-gap: 1.5rem;
 
   &__header {
-    color: $font-color-second;
+    color: $main-color-black;
     font-size: 3rem;
     text-align: center;
-    padding: 3rem 0 1rem 0;
+    padding: 3rem 0 0 0;
     text-transform: uppercase;
     letter-spacing: 5px;
+  }
+
+  &__text {
+    text-align: center;
+    color: $font-color-second;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    text-transform: lowercase;
   }
 }
 
@@ -554,4 +568,60 @@ a:visited {
   grid-column-end: 9;
   grid-row-start: 6;
   grid-row-end: 9;
+}
+
+/////////////////////////////////////footer///////////////////////
+
+.footer {
+  padding: 2rem 1rem;
+  background-color: $main-color-black;
+  margin-top: 1rem;
+
+  &__column {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+  }
+
+  &__column:first-child {
+    justify-self: start;
+  }
+
+  &__column:last-child {
+    justify-self: end;
+  }
+
+  &__text {
+    color: $font-color-main;
+  }
+
+  &__info {
+    text-transform: lowercase;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    color: $font-color-second;
+    font-size: 5.5rem;
+  }
+
+  a {
+    color: $font-color-main;
+    text-transform: lowercase;
+  }
+  span {
+    color: $font-color-main;
+  }
+}
+
+.social__icon {
+  padding-left: 3rem;
+  color: $font-color-main;
+
+  &:hover {
+    color: $font-color-second;
+  }
 }
