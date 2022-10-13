@@ -85,7 +85,6 @@ setTimeout(rendermap, 1000);
 // how to add event listener on marker????
 
 /// implementing smooth scrolling
-
 document
   .querySelector(".navigation__ul")
   .addEventListener("click", function (e) {
