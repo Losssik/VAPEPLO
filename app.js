@@ -98,3 +98,27 @@ document
       });
     }
   });
+
+// tabbed component (section QUESTIONS)
+
+const tabs = document.querySelectorAll(".questions__btn");
+const tabsContainer = document.querySelector(".questions__tab-container");
+const tabsContent = document.querySelectorAll(".questions__content");
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target;
+  console.log(clicked);
+
+  if (!clicked) return;
+
+  tabs.forEach((tab) => tab.classList.remove("questions__btn--active"));
+  clicked.classList.add("questions__btn--active");
+
+  tabsContent.forEach((content) =>
+    content.classList.remove("questions__content--active")
+  );
+
+  document
+    .querySelector(`.questions__content--${clicked.dataset.set}`)
+    .classList.add("questions__content--active");
+});

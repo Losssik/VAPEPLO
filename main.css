@@ -352,7 +352,7 @@ a:visited {
 
 .offer__product {
   border-radius: 10px;
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,7 +519,7 @@ a:visited {
   color: #edf2f4;
   z-index: 3;
   margin-top: 6rem;
-  padding: 3rem;
+  padding: 5rem 3rem;
   background-color: #ef233c;
   letter-spacing: 3px;
   border-radius: 3px;
@@ -815,8 +815,8 @@ a:visited {
   border: none;
   font-size: 1.8rem;
   color: #edf2f4;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 2px;
   border-radius: 1rem;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -825,8 +825,8 @@ a:visited {
 
 .questions__btn--active {
   background-color: #ef233c;
-  -webkit-transform: translateY(-4px);
-          transform: translateY(-4px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .questions__content {
@@ -844,6 +844,9 @@ a:visited {
   justify-items: start;
   margin-top: 4rem;
   padding: 5rem 1rem;
+  min-height: 50vh;
+  -webkit-animation: toOpacityFull 1s;
+          animation: toOpacityFull 1s;
 }
 
 .questions__heading5 {
@@ -858,9 +861,5 @@ a:visited {
   letter-spacing: 2px;
   font-size: 1.8rem;
   line-height: 2;
-}
-
-#icon {
-  font-size: 16rem;
 }
 /*# sourceMappingURL=main.css.map */
