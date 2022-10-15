@@ -6,11 +6,14 @@ const navLink = document.querySelectorAll(".navigation__link");
 const cookieEl = document.querySelector(".cookie__container");
 const cookieAcceptBtn = document.querySelector("#cookie-accept");
 const cookieRejectBtn = document.querySelector("#cookie-reject");
+const tabs = document.querySelectorAll(".questions__btn");
+const tabsContainer = document.querySelector(".questions__tab-container");
+const tabsContent = document.querySelectorAll(".questions__content");
 
 // IMPLEMENTING STICKY NAVIGATION
 const stickyNavigation = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+  //console.log(entry);
 
   if (!entry.isIntersecting) {
     navigation.classList.add("sticky");
@@ -101,12 +104,8 @@ document
 
 // tabbed component (section QUESTIONS)
 
-const tabs = document.querySelectorAll(".questions__btn");
-const tabsContainer = document.querySelector(".questions__tab-container");
-const tabsContent = document.querySelectorAll(".questions__content");
-
 tabsContainer.addEventListener("click", function (e) {
-  const clicked = e.target;
+  const clicked = e.target.closest(".questions__btn");
   console.log(clicked);
 
   if (!clicked) return;
@@ -121,4 +120,27 @@ tabsContainer.addEventListener("click", function (e) {
   document
     .querySelector(`.questions__content--${clicked.dataset.set}`)
     .classList.add("questions__content--active");
+});
+
+//revealing section animation
+
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  //console.log(entries);
+  const [entry] = entries;
+  console.log(entry);
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.11,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
 });

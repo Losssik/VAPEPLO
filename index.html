@@ -20,12 +20,21 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="main.css" />
-    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" defer></script>
-    <script src ='app.js' defer></script>
-    
+    <script
+      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="app.js" defer></script>
 
     <title>Vape Plo</title>
   </head>
@@ -33,10 +42,18 @@
     <header class="header">
       <nav class="navigation">
         <ul class="navigation__ul">
-          <li class="navigation__item"><a href="#" class="navigation__link">Liquidy</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Aromaty</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Sprzęt</a></li>
-          <li class="navigation__item"><a href="#kontakt" class="navigation__link">Kontakt</a></li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Liquidy</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Aromaty</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">Sprzęt</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#kontakt" class="navigation__link">Kontakt</a>
+          </li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -119,7 +136,7 @@
       </div>
     </div>
 
-    <div class="testimonials">
+    <div class="testimonials section">
       <h2 class="testimonials__header">wysoko oceniany sklep</h2>
       <h5 class="testimonials__subtext">co klienci o nas piszą</h5>
       <div class="testimonials__container grid--3">
@@ -131,7 +148,9 @@
           />
           <p class="testimonials__author">Jacek Goyke</p>
           <p class="testimonials__review">
-            Mój ulubiony sklep z EP! Sprzedawca zawsze chętnie pomoże i doradzi. Widać, że zna się na tym co robi ;) Jestem stałym klientem i nie mogę powiedzieć złego słowa
+            Mój ulubiony sklep z EP! Sprzedawca zawsze chętnie pomoże i doradzi.
+            Widać, że zna się na tym co robi ;) Jestem stałym klientem i nie
+            mogę powiedzieć złego słowa
           </p>
         </div>
         <div class="testimonials__card">
@@ -142,7 +161,9 @@
           />
           <p class="testimonials__author">Agata Małecka</p>
           <p class="testimonials__review">
-            Super sklep! Pozdrawiam uprzejmego sprzedawce! Miły i uśmiechnięty. Nigdzie nie mogłam znaleźć tubki do mojego e-papierosa, dopiero tutaj udało mi się ją zakupić
+            Super sklep! Pozdrawiam uprzejmego sprzedawce! Miły i uśmiechnięty.
+            Nigdzie nie mogłam znaleźć tubki do mojego e-papierosa, dopiero
+            tutaj udało mi się ją zakupić
           </p>
         </div>
         <div class="testimonials__card">
@@ -153,143 +174,179 @@
           />
           <p class="testimonials__author">Przemek Białk</p>
           <p class="testimonials__review">
-            Gdy miałem problem z moim dragiem (nie wykrywał grzałek) szybko go naprawiono w kilka dni. Szkoda, że nie ma więcej takich sklepów. Ceny jedne z lepszych w naszych okolicach
+            Gdy miałem problem z moim dragiem (nie wykrywał grzałek) szybko go
+            naprawiono w kilka dni. Szkoda, że nie ma więcej takich sklepów.
+            Ceny jedne z lepszych w naszych okolicach
           </p>
         </div>
-       
-    </div>
-  <div class="cookie__container">
-    <div class="cookie">
-      <p class="cookie__text">Nasza strona wykorzystuje cookies. Czy chcesz je zaakceptować?</p>
-      <a href="#" class="btn cookie__btn" id="cookie-accept">tak</a>
-      <a href="#" class="btn cookie__btn" id="cookie-reject"> nie</a>
-    </div>
-  </div>
-
- 
-
-
-  <section class="gallery__container">
-    <h3 class="gallery__header">
-    Profesjonalne produkty
-    </h3>
-    <h5 class="gallery__text">Szeroki wybór sprzętów    
-    </h5>
-
-    <div class="gallery">
-      <figure class="gallery__item gallery__item--1">
-        <img src="img/square1.jpg" class="gallery__img" alt="image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--2">
-        <img src="img/square2.jpg" class="gallery__img" alt="image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--3">
-        <img src="img/pion1.jpg" class="gallery__img" alt="image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--4">
-        <img src="img/prostokat.jpg" class="gallery__img" alt="image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--5">
-        <img src="img/pion2.jpg" class="gallery__img" alt="image 1">
-      </figure>
-      <figure class="gallery__item gallery__item--6">
-        <img src="img/pion3.jpg" class="gallery__img" alt="image 1">
-      </figure>
-    </div>
-  </section>
-
-
-  <section class="questions">
-    <h3 class="questions__header">Często zadawane pytania</h3>
-    <div class="questions__tab-container">
-      <button class="btn questions__btn questions__btn--active" data-set="1">
-        parownik przecieka
-      </button>
-      <button class="btn questions__btn " data-set="2">
-        "check atomizer"
-      </button>
-      <button class="btn questions__btn" data-set="3">
-        nie ładuje 
-      </button>
-    </div>
-    <div class="questions__content questions__content--1 questions__content--active">
-      <div>
-      <ion-icon name="information-circle-outline" class="footer__icon"></ion-icon>
-      <h5 class="questions__heading5">Co zrobić gdy parownik / grzałka przecieka?</h5>
-      
       </div>
-      <p class="questions__text"> 
-        Jeśli atomizer przecieka upewnij się, że nie jest nigdzie pęknięty oraz ma prawidłowo założone uszczelki. Jeśli atomizer nie ma żadnych pęknięć (np. uszczerbionej tubki) 
-        oznacza to, że liquid przedostaje się przez grzałkę. Dzieje się tak gdy grzałka jest już zużyta lub przepalona (zbyt duża nastawy mocy). Zaleca się wymianę grzałki na nową. 
-        Należy pamiętać, że przecieki mogą również następować z powodu zbyt krótkich zaciągnięć podczas vapowania. Płyn zebrany na grzałce nie zostaje w całości odparowany, zbiera się
-        w komorze grzewczej co w ostateczności prowadzi do przecieków. Jeśli nadal masz problem z wyciekami liquidu, rozważ zakup gęstszego płynu. Szukaj płynów z większą ilością
-        gliceryny (często oznaczana przed producentów ba butelkach jako 'VG') Im większy stosunek VG do PG, tym bardziej gęsty płyn.
-      </p>
     </div>
-    <div class="questions__content questions__content--2 " >
-      <div>
-        <ion-icon name="information-circle-outline" class="footer__icon"></ion-icon>
-        <h5 class="questions__heading5">Komunikat "no atomizer / check atomizer"</h5>
+    <div class="cookie__container">
+      <div class="cookie">
+        <p class="cookie__text">
+          Nasza strona wykorzystuje cookies. Czy chcesz je zaakceptować?
+        </p>
+        <a href="#" class="btn cookie__btn" id="cookie-accept">tak</a>
+        <a href="#" class="btn cookie__btn" id="cookie-reject"> nie</a>
       </div>
-      <p class="questions__text"> 
-        Komunikat ten świadczy o nie wykrywaniu parownika. Do najczęstszych przyczyn tego przypadku zaliczamy brak styku lub przepaloną grzałkę (zwarcie). 
-        Z reguły wystarczy wymienić grzałkę na nową, jeśli to nie pomoże należy lekko podnieść pin boxa (miejsce gdzie się wkręca grzałkę do moda) oraz
-        przeczyścić gwinty zarówno w atomizerze jak i zasilaniu.
-      </p>
     </div>
-    <div class="questions__content questions__content--3">
-      <div>
-        <ion-icon name="information-circle-outline" class="footer__icon"></ion-icon>
-        <h5 class="questions__heading5">Problem z ładowaniem e-papierosa</h5>
-      </div>
-      <p class="questions__text"> 
-        Jeśli Twój e-papieros się nie ładuje należy się upewnić, że gniazdo USB nie jest wyłamane. Sprwadź również ładowarkę na innych urządzeniach czy przypadkiem
-        to ona nie jest uszkodzona. Upewnij się, że kabeł ladowania jak i port USB są czyste. Jeśli liquid wycieka z portu USB lub gniazdo jest mokre, pozostaw e-papierosa 
-        głowicą na dół na całą noc by liquid mógł się w całości wydostać. Jeśli posiadasz sprzęt na wymienne ogniwa zaleca się korzystanie z zewnętrznej ładowarki, np XTAR M2.
-      </p>
-    </div>
-  </section>
 
-  <section class="location">
-    <div class="map-container">
+    <section class="gallery__container">
+      <h3 class="gallery__header">Profesjonalne produkty</h3>
+      <h5 class="gallery__text">Szeroki wybór sprzętów</h5>
+
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img src="img/square1.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img src="img/square2.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img src="img/pion1.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img src="img/prostokat.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img src="img/pion2.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img src="img/pion3.jpg" class="gallery__img" alt="image 1" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="questions section">
+      <h3 class="questions__header">Często zadawane pytania</h3>
+      <div class="questions__tab-container">
+        <button class="btn questions__btn questions__btn--active" data-set="1">
+          parownik przecieka
+        </button>
+        <button class="btn questions__btn" data-set="2">
+          "check atomizer"
+        </button>
+        <button class="btn questions__btn" data-set="3">nie ładuje</button>
+      </div>
+      <div
+        class="questions__content questions__content--1 questions__content--active"
+      >
+        <div>
+          <ion-icon
+            name="information-circle-outline"
+            class="footer__icon"
+          ></ion-icon>
+          <h5 class="questions__heading5">
+            Co zrobić gdy parownik / grzałka przecieka?
+          </h5>
+        </div>
+        <p class="questions__text">
+          Jeśli atomizer przecieka upewnij się, że nie jest nigdzie pęknięty
+          oraz ma prawidłowo założone uszczelki. Jeśli atomizer nie ma żadnych
+          pęknięć (np. uszczerbionej tubki) oznacza to, że liquid przedostaje
+          się przez grzałkę. Dzieje się tak gdy grzałka jest już zużyta lub
+          przepalona (zbyt duża nastawy mocy). Zaleca się wymianę grzałki na
+          nową. Należy pamiętać, że przecieki mogą również następować z powodu
+          zbyt krótkich zaciągnięć podczas vapowania. Płyn zebrany na grzałce
+          nie zostaje w całości odparowany, zbiera się w komorze grzewczej co w
+          ostateczności prowadzi do przecieków. Jeśli nadal masz problem z
+          wyciekami liquidu, rozważ zakup gęstszego płynu. Szukaj płynów z
+          większą ilością gliceryny (często oznaczana przed producentów ba
+          butelkach jako 'VG') Im większy stosunek VG do PG, tym bardziej gęsty
+          płyn.
+        </p>
+      </div>
+      <div class="questions__content questions__content--2">
+        <div>
+          <ion-icon
+            name="information-circle-outline"
+            class="footer__icon"
+          ></ion-icon>
+          <h5 class="questions__heading5">
+            Komunikat "no atomizer / check atomizer"
+          </h5>
+        </div>
+        <p class="questions__text">
+          Komunikat ten świadczy o nie wykrywaniu parownika. Do najczęstszych
+          przyczyn tego przypadku zaliczamy brak styku lub przepaloną grzałkę
+          (zwarcie). Z reguły wystarczy wymienić grzałkę na nową, jeśli to nie
+          pomoże należy lekko podnieść pin boxa (miejsce gdzie się wkręca
+          grzałkę do moda) oraz przeczyścić gwinty zarówno w atomizerze jak i
+          zasilaniu.
+        </p>
+      </div>
+      <div class="questions__content questions__content--3">
+        <div>
+          <ion-icon
+            name="information-circle-outline"
+            class="footer__icon"
+          ></ion-icon>
+          <h5 class="questions__heading5">Problem z ładowaniem e-papierosa</h5>
+        </div>
+        <p class="questions__text">
+          Jeśli Twój e-papieros się nie ładuje należy się upewnić, że gniazdo
+          USB nie jest wyłamane. Sprwadź również ładowarkę na innych
+          urządzeniach czy przypadkiem to ona nie jest uszkodzona. Upewnij się,
+          że kabeł ladowania jak i port USB są czyste. Jeśli liquid wycieka z
+          portu USB lub gniazdo jest mokre, pozostaw e-papierosa głowicą na dół
+          na całą noc by liquid mógł się w całości wydostać. Jeśli posiadasz
+          sprzęt na wymienne ogniwa zaleca się korzystanie z zewnętrznej
+          ładowarki, np XTAR M2.
+        </p>
+      </div>
+    </section>
+
+    <section class="location">
+      <div class="map-container">
         <div id="map"></div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-<footer class="footer">
+    <footer class="footer">
       <div class="footer__container grid--4" id="kontakt">
         <div class="footer__column">
-          <ion-icon name="information-circle-outline" class="footer__icon"></ion-icon>
-          <p class="footer__text">Generała Henryka Dąbrowskiego 17, Rumia
-          </p>
+          <ion-icon
+            name="information-circle-outline"
+            class="footer__icon"
+          ></ion-icon>
+          <p class="footer__text">Generała Henryka Dąbrowskiego 17, Rumia</p>
         </div>
-      
+
         <div class="footer__column">
           <ion-icon name="call-outline" class="footer__icon"></ion-icon>
           <a href="tel:555-555-5555" class="footer__info">+48 530 034 701</a>
         </div>
         <div class="footer__column">
-          
-            <ion-icon name="mail-outline" class="footer__icon"></ion-icon>
-            <a href="mailto:przemek.bialkwno@gmail.com" class="footer__info">vapeplo@gmail.com</a>
-          
+          <ion-icon name="mail-outline" class="footer__icon"></ion-icon>
+          <a href="mailto:przemek.bialkwno@gmail.com" class="footer__info"
+            >vapeplo@gmail.com</a
+          >
         </div>
         <div class="footer__column">
           <div>
             <a href="https://facebook.com">
-              <ion-icon name="logo-facebook" class="footer__icon social__icon"></ion-icon>
+              <ion-icon
+                name="logo-facebook"
+                class="footer__icon social__icon"
+              ></ion-icon>
             </a>
             <a href="https://instagram.com">
-              <ion-icon name="logo-instagram" class="footer__icon social__icon"></ion-icon>
+              <ion-icon
+                name="logo-instagram"
+                class="footer__icon social__icon"
+              ></ion-icon>
             </a>
             <a href="https://tiktok.com">
-              <ion-icon name="logo-tiktok" class="footer__icon social__icon"></ion-icon>
+              <ion-icon
+                name="logo-tiktok"
+                class="footer__icon social__icon"
+              ></ion-icon>
             </a>
           </div>
         </div>
       </div>
     </footer>
-    <script 
+    <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
