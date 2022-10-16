@@ -991,6 +991,7 @@ a:visited {
     font-weight: 500;
     background-color: white;
     color: #060707;
+    border-bottom: 2px solid #060707;
   }
   .footer {
     margin: 0;
