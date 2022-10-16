@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
 const rendermap = function () {
   //coords of shop
   const coords = [54.569584, 18.3923391];
-  const map = L.map("map").setView(coords, 16);
+  const map = L.map("map").setView(coords, 17);
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:

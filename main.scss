@@ -492,7 +492,8 @@ a:visited {
 .leaflet-popup-content-wrapper,
 .leaflet-popup.tip {
   background-color: $main-color-black;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -778,13 +779,13 @@ a:visited {
   }
 
   .header__title {
-    font-size: 6rem;
+    font-size: 7rem;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   #map {
-    height: 25rem;
+    height: 29rem;
   }
 }
 
