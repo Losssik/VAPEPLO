@@ -984,6 +984,11 @@ a:visited {
   .header__text {
     margin-top: 8rem;
   }
+  .location__header {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+  }
   .footer {
     margin: 0;
   }
