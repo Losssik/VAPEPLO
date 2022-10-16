@@ -415,6 +415,10 @@ a:visited {
           animation-duration: 1s;
 }
 
+.vendor {
+  overflow-x: hidden;
+}
+
 .vendor__feature {
   gap: 12rem;
   -webkit-animation-name: inifnityRightAndReserve;

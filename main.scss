@@ -307,6 +307,7 @@ a:visited {
 /////////////////////////////////////////// VENDOR SECTION ///////////////////////////////////////////
 
 .vendor {
+  overflow-x: hidden;
   &__feature {
     gap: 12rem;
     animation-name: inifnityRightAndReserve;
