@@ -633,7 +633,19 @@ a:visited {
 }
 
 .location {
-  margin-top: 5rem;
+  margin-top: 3rem;
+}
+
+.location__header {
+  text-align: center;
+  color: #edf2f4;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background-color: #060707;
+  padding: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .gallery {
@@ -889,7 +901,31 @@ a:visited {
           transform: translateY(15rem);
 }
 
-@media (max-width: 80em) {
+@media (max-width: 1000px) {
+  .footer__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__column {
+    padding: 1rem 0;
+  }
+  .footer__column:last-child {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .social__icon {
+    padding-left: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
   .offer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -924,30 +960,9 @@ a:visited {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  .footer__container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    justify-items: start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .footer__column {
-    padding: 1rem 0;
-  }
-  .footer__column:last-child {
-    -ms-grid-column-align: start;
-        justify-self: start;
-  }
-  .social__icon {
-    padding-left: 0;
-    margin-right: 2rem;
-  }
 }
 
-@media (max-width: 60em) {
+@media (max-width: 600px) {
   .questions__btn {
     font-size: 1.2rem;
   }
@@ -956,18 +971,27 @@ a:visited {
     margin-bottom: 2rem;
   }
   .header__title {
-    font-size: 4rem;
+    font-size: 6rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
   #map {
-    height: 20rem;
+    height: 25rem;
   }
 }
 
-@media (max-width: 48em) {
+@media (max-width: 480px) {
+  .header__text {
+    margin-top: 8rem;
+  }
+  .footer {
+    margin: 0;
+  }
   .footer__column:first-child {
     display: none;
+  }
+  .map-container {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
