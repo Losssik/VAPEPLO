@@ -548,6 +548,7 @@ a:visited {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1111111111111111;
   }
   .navigation__ul {
     position: fixed;
@@ -983,6 +984,9 @@ a:visited {
   .header__text {
     margin-top: 10rem;
   }
+  .vendor__feature {
+    gap: 5rem;
+  }
   .location__header {
     margin: 0;
     font-size: 1.6rem;
@@ -990,7 +994,7 @@ a:visited {
     font-weight: 500;
     background-color: white;
     color: #060707;
-    border-top: 3px solid #060707;
+    border-top: 2px solid #060707;
   }
   .footer {
     margin: 0;
