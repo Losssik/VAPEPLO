@@ -972,9 +972,9 @@ a:visited {
     margin-bottom: 2rem;
   }
   .header__title {
-    font-size: 7rem;
+    font-size: 8rem;
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
   #map {
     height: 29rem;
@@ -983,12 +983,13 @@ a:visited {
 
 @media (max-width: 480px) {
   .header__text {
-    margin-top: 8rem;
+    margin-top: 10rem;
   }
   .location__header {
     margin: 0;
     font-size: 1.6rem;
     letter-spacing: 4px;
+    font-weight: 500;
   }
   .footer {
     margin: 0;
