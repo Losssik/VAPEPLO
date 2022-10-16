@@ -257,7 +257,7 @@ a:visited {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 }
 
 .header__heading {
@@ -991,7 +991,6 @@ a:visited {
     font-weight: 500;
     background-color: white;
     color: #060707;
-    border-bottom: 2px solid #060707;
     border-top: 2px solid #060707;
   }
   .footer {
