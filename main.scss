@@ -437,7 +437,6 @@ a:visited {
     transition: 0.3s;
     background-color: $main-color-black;
     padding-bottom: 2rem;
-    opacity: 0.85;
   }
 
   .navigation__ul.active {
@@ -800,7 +799,7 @@ a:visited {
     font-weight: 500;
     background-color: white;
     color: $main-color-black;
-    border-top: 2px solid $main-color-black;
+    border-top: 3px solid $main-color-black;
   }
   .footer {
     margin: 0;
