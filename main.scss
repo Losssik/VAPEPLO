@@ -325,8 +325,8 @@ a:visited {
 /////////////////////////////////////////// TESTIMONIALS ///////////////////////////////////////////
 
 .testimonials {
-  margin-top: -2rem;
-  padding: 0 2rem;
+  // margin-top: -2rem;
+  padding: 4rem 2rem;
   color: red;
 
   &__header {
@@ -475,7 +475,7 @@ a:visited {
 
 /////////////////////////////////////LOCATION///////////////////////
 .map-container {
-  padding: 2rem;
+  padding: 0.5rem 2rem;
 }
 
 #map {
@@ -582,7 +582,7 @@ a:visited {
 .footer {
   padding: 2rem;
   background-color: $main-color-black;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
 
@@ -711,4 +711,49 @@ a:visited {
 .section--hidden {
   opacity: 0;
   transform: translateY(15rem);
+}
+
+/////////////////////////////////// MEDIA QUERY/////////////////////////
+
+@media (max-width: 80em) {
+  .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonials__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .questions__content--active {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: center;
+  }
+
+  .footer__column {
+    padding: 1rem 0;
+  }
+  .footer__column:last-child {
+    justify-self: start;
+  }
+  .social__icon {
+    padding-left: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .questions__header {
+    color: yellow;
+  }
 }
