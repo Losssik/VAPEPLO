@@ -948,8 +948,26 @@ a:visited {
 }
 
 @media (max-width: 60em) {
-  .questions__header {
-    color: yellow;
+  .questions__btn {
+    font-size: 1.2rem;
+  }
+  .questions__heading5 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .header__title {
+    font-size: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  #map {
+    height: 20rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .footer__column:first-child {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
