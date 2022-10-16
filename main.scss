@@ -61,7 +61,6 @@ a:visited {
   position: fixed;
   width: 100%;
   background-color: $main-color-black;
-  opacity: 0.9;
   padding-bottom: 3rem;
   z-index: 1000;
   animation-name: toOpacityFull;
@@ -799,6 +798,8 @@ a:visited {
     font-size: 1.6rem;
     letter-spacing: 4px;
     font-weight: 500;
+    background-color: none;
+    color: $main-color-black;
   }
   .footer {
     margin: 0;
